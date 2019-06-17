@@ -7,7 +7,7 @@ import { products } from "../products";
   templateUrl: "./product-list.component.html",
   styleUrls: ["./product-list.component.css"]
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
   products = products;
   counter = 0;
   share() {
@@ -16,11 +16,7 @@ export class ProductListComponent implements OnInit {
   onNotify() {
     console.log("You will be notified when the product goes on sale");
   }
-  ngOnInit() {
-    setInterval(() => {
-      this.counter++
-    }, 200);
-  }
+ 
   
 }
 

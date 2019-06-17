@@ -1,7 +1,7 @@
 <h2>Products</h2>
-<ng-container *ngFor="let product of products">
+<ng-container *ngFor="let product of products; index as pid">
   <h3>
-    <a [title]="product.name + ' details'"> {{ product.name }} </a>
+    <a [title]="product.name + ' details'" [routerLink]="['/products', pid]"> {{ product.name }} </a>
   </h3>
   <p *ngIf="product.description">
       Description : {{product.description}}
